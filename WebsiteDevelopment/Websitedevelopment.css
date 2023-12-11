@@ -1,0 +1,71 @@
+.banner-section-bg-container {
+    background-color: #ffffff;
+    font-family: roboto;
+    font-size: 16px;
+    margin-top: 150px;
+}
+
+.hh {
+    font-family: roboto;
+    font-size: 30px;
+}
+
+.banner-heading {
+    font-size: 40px;
+}
+
+span {
+    color: #c4c2c2;
+}
+
+.banner-caption {
+    color: #001110;
+}
+
+.boxx {
+    margin: 20px;
+    padding: 20px;
+}
+
+.H {
+    background-color: #e6e6e6;
+    font-size: 30px;
+    height: 50px;
+    width: 200px;
+    padding: 5px;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.foote {
+    padding: 20px;
+}
+
+.i {
+    margin: 30px;
+    padding: 20px;
+}
+
+.h {
+    margin: 30px;
+    padding: 20px;
+}
+
+.footer-section-heading {
+    font-size: 30px;
+}
+
+#nabAr {
+    background-color: transparent;
+}
+
+.ha {
+    background-color: #ffffff;
+    color: blue;
+    border-color: blue;
+}
+
+.footter {
+    margin-left: 20vw;
+}

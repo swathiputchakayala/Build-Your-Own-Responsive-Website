@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Modal</title>
+    <!-- Include Bootstrap CSS and JavaScript -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Websitedevelopment.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Slider</title>
+    <style>
+        /* Add your CSS styles here */
+        .plan {
+            display: none;
+        }
+
+        .highlighted {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Modal -->
+    <div class="d-flex justify-content-center flex-column">
+        <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="orderModalLabel">Place Your Order</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Order form -->
+                        <form>
+                            <div class="form-group">
+                                <form action="{getform-endpoint}" method="POST">
+                                    <label for="name">Name</label>
+                                    <input type='text' name='Name' id='name'><br />
+                                    <label for="email">Email</label>
+                                    <input type='email' name='Email' id='email'>
+                                </form>
+                            </div>
+                            <div class="form-group">
+                                <label for="comments">Order Comments</label>
+                                <textarea class="form-control" id="comments" rows="4" placeholder="Enter your order comments"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top ">
+            <div class="container" id="nabAr">
+                <a class="navbar-brand" href="#">
+                    <h1 class="hh">Company name</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+                    <!-- MAin -->
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-link active" id="navItem1" href="#wcuSection">
+                            Features
+                            <span class="sr-only">(current)</span>
+                        </a>
+                        <a class="nav-link" id="navItem2">Enterprise</a>
+                        <a class="nav-link" id="navItem3">Support</a>
+                        <p><a href="#" data-toggle="modal" data-target="#orderModal" class="nav-link">Pricing</a></p>
+
+                        <a class="nav-link" href="#followUsSection" id="navItem5"><button class="btn btn-primary ha">Sign Up</button></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="mt-5 text-center">
+
+            <h1 class="banner-heading mt-5">Pricing</h1>
+            <p class="banner-caption">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
+            <div class="boxx text-center d-flex justify-content-center flex-row col-12">
+                <div class="p-3">
+                    <h1 class="H text-center">Free</h1>
+                    <div>
+                        <h1>$0 <span>/ mo</span></h1>
+                        <p>
+                            10 users included <br />
+                            2 GB of storage<br />
+                            Email support<br />
+                            Help center access<br />
+                        </p>
+                        <form action="{getform-endpoint}" method="POST">
+                            <button class="btn btn-primary ha" type="submit">Sign up for free</button>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="p-3">
+                    <h1 class="H text-center">Pro</h1>
+                    <div>
+                        <h1>$15 <span>/ mo</span></h1>
+                        <p>
+                            20 users included <br />
+                            10 GB of storage<br />
+                            Priority Email support<br />
+                            Help center access<br />
+                        </p>
+                        <button class="btn btn-primary">Get started</button>
+                    </div>
+                </div>
+                <div class="p-3">
+                    <h1 class="H text-center">Enterprise</h1>
+                    <div>
+                        <h1>$29 <span>/ mo</span></h1>
+                        <p>
+                            30 users included <br />
+                            15 GB of storage<br />
+                            Phone and support<br />
+                            Help center access<br />
+                        </p>
+                        <button class="btn btn-primary">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line">
+            <hr width="80%" size="30" align="center">
+        </div>
+        <div class="footter">
+            <div class="container">
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <div class=" i foote d-flex justify-content-start flex-column">
+                            <div class="follow-us-icon-container">
+                                <i class="fab fa-twitter icon"></i>
+                            </div>
+                            <p>© 2017-2018</p>
+                        </div>
+                        <div class="f d-flex justify-content-start flex-row ">
+                            <div class="foote d-flex flex-column">
+                                <h1 class="footer-section-heading">Features</h1>
+                                <p class=" d-flex  flex-row">
+                                    Cool stuff<br />
+                                    Random feature<br />
+                                    Team feature<br />
+                                    Stuff for developers<br />
+                                    Another one<br />
+                                    Last time<br />
+                                </p>
+                            </div>
+                            <div class="foote d-flex  flex-column">
+                                <h1 class="footer-section-heading">Resources</h1>
+                                <p class="footer-section-address d-flex  flex-row">
+                                    Resource<br />
+                                    Resource name<br />
+                                    Another resource<br />
+                                    Final resource<br />
+                                </p>
+                            </div>
+                            <div class="foote d-flex flex-column">
+                                <h1 class="footer-section-heading">About</h1>
+                                <p class="footer-section-address d-flex  flex-row">
+                                    Team<br />
+                                    Locations<br />
+                                    Privacy<br />
+                                    Terms<br />
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input type="range" id="userSlider" min="0" max="100" step="10">
+        <div class="plans">
+            <div class="plan" data-min="0" data-max="10">Free</div>
+            <div class="plan" data-min="10" data-max="20">Pro</div>
+            <div class="plan" data-min="20" data-max="30">Enterprise</div>
+        </div>
+        <script>
+            // JavaScript code to handle the slider and highlight plans
+            const userSlider = document.getElementById('userSlider');
+            const plans = document.querySelectorAll('.plan');
+
+            userSlider.addEventListener('input', highlightPlan);
+
+            function highlightPlan() {
+                const userCount = parseInt(userSlider.value);
+
+                plans.forEach(plan => {
+                    const min = parseInt(plan.getAttribute('data-min'));
+                    const max = parseInt(plan.getAttribute('data-max'));
+
+                    if (userCount >= min && userCount < max) {
+                        plan.classList.add('highlighted');
+                    } else {
+                        plan.classList.remove('highlighted');
+                    }
+                });
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>
